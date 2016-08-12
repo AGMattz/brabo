@@ -1,6 +1,6 @@
 # WoozshBuild
 
-required: node & ruby & global gulp install
+required: git & node & ruby & global gulp install
 
 Get Started: 
 cmd in folder
