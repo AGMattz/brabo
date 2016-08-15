@@ -8,7 +8,9 @@ Get Started:
 
 cmd in folder
 
-git clone https://github.com/Woozsh/WoozshBuild.git
+git clone https://github.com/Woozsh/SASSBuild.git
+
+cmd in map
 
 npm install
 
