@@ -90,14 +90,26 @@ gulp.task('slim', function(){
 	    stream: true
 	  }));
 });
+//JADE
+var pug = require('gulp-pug');
+
+gulp.task('pug', function buildHTML() {
+  return gulp.src('app/pug/*.pug')
+  .pipe(pug({
+    // Your options in here.
+  })).pipe(gulp.dest("dist/"))
+	.pipe(browserSync.reload({
+		stream: true
+	}));
+});
 
 //Watches
 gulp.task('watch', ['browserSync', 'sass'], function(){
   gulp.watch('app/sass/**/*.sass', ['sass']); //watches all SASS
-  gulp.watch('app/slim/**/*.slim', ['slim']);
+  gulp.watch('app/pug/**/*.pug', ['pug']); //watches all puggs *-*
   gulp.watch('app/js/**/*.js', browserSync.reload);
   //other watches
 });
 
 //DEFAULT
-gulp.task('default', ['sass','slim','browserSync', 'watch']);
+gulp.task('default', ['sass','pug','browserSync', 'watch']); //runs tasks and then watches them
