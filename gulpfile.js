@@ -77,34 +77,23 @@ gulp.task('build', function (callback) {
   )
 });
 
-//SLIM
-var slim = require("gulp-slim");
-
-gulp.task('slim', function(){
-  gulp.src("app/slim/*.slim")
-    .pipe(slim({
-      pretty: true
-    }))
-    .pipe(gulp.dest("dist/"))
-		.pipe(browserSync.reload({
-	    stream: true
-	  }));
-});
-//JADE
+//Puggies
 var pug = require('gulp-pug');
 
 gulp.task('pug', function buildHTML() {
   return gulp.src('app/pug/*.pug')
   .pipe(pug({
     // Your options in here.
-  })).pipe(gulp.dest("dist/"))
+		pretty: true
+  }))
+	.pipe(gulp.dest("./dist/"))
 	.pipe(browserSync.reload({
 		stream: true
 	}));
 });
 
 //Watches
-gulp.task('watch', ['browserSync', 'sass'], function(){
+gulp.task('watch', ['browserSync', 'sass', 'pug'], function(){
   gulp.watch('app/sass/**/*.sass', ['sass']); //watches all SASS
   gulp.watch('app/pug/**/*.pug', ['pug']); //watches all puggs *-*
   gulp.watch('app/js/**/*.js', browserSync.reload);
