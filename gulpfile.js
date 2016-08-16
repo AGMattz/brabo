@@ -21,7 +21,8 @@ function errorlog(err){
 gulp.task('sass', function(){
   return gulp.src('app/sass/style.sass')
   .pipe(sourcemaps.init())
-  .pipe(sass({outputStyle: 'compressed'}))
+  .pipe(sass({includePaths: require('node-normalize-scss').includePaths,
+	outputStyle: 'compressed'}))
   .on('error', errorlog)
   .pipe(autoprefixer({
             browsers: ['last 2 versions'],
@@ -76,13 +77,27 @@ gulp.task('build', function (callback) {
   )
 });
 
+//SLIM
+var slim = require("gulp-slim");
+
+gulp.task('slim', function(){
+  gulp.src("app/slim/*.slim")
+    .pipe(slim({
+      pretty: true
+    }))
+    .pipe(gulp.dest("dist/"))
+		.pipe(browserSync.reload({
+	    stream: true
+	  }));
+});
+
 //Watches
 gulp.task('watch', ['browserSync', 'sass'], function(){
   gulp.watch('app/sass/**/*.sass', ['sass']); //watches all SASS
-  gulp.watch('dist/*.html', browserSync.reload);
+  gulp.watch('app/slim/**/*.slim', ['slim']);
   gulp.watch('app/js/**/*.js', browserSync.reload);
   //other watches
 });
 
 //DEFAULT
-gulp.task('default', ['sass','browserSync', 'watch']);
+gulp.task('default', ['sass','slim','browserSync', 'watch']);
