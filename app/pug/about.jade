@@ -1,5 +1,7 @@
 extends partials/layout
 
+block config
+  - var pageTitle = "HC Brabo - About"
 block content
     section.about
       .title
@@ -10,10 +12,12 @@ block content
         p Bij rood en wit en zwart voelt men zich thuis
         p Dixit, Patron Niko <br>Praeses 2016-2017
       .links
-        a(href="#") Praesidium
-        a(href="#") Pro-Senioren
-        a(href="#") Clublied
-        a(href="#") Geschiedenis
-      section#praes
-        .title
-          h1 Praesidium 2016-2017
+        .box
+          a(href="#praes") Praesidium
+        .box
+          a(href="#") Pro-Senioren
+        .box
+          a(href="#") Clublied
+        .box
+          a(href="#") Geschiedenis
+      include partials/praesidium

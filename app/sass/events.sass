@@ -1,0 +1,45 @@
+.events
+  h1
+  .evenementen
+    .event
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      margin-bottom: 10px
+
+      img
+        width: auto
+        height: auto
+        max-width: 300px
+        max-height: 200px
+        align-self: center
+      .text
+        flex: 0 0 40%
+        order: -1
+        color: #111
+        padding: 0px 30px
+        h2
+          text-align: left
+        h3
+        p
+
+@media (min-width: 1080px)
+  .events
+    h1
+    .evenementen
+      .event
+        flex-direction: row
+        flex-flow: flow
+        justify-content: center
+        margin-bottom: 10px
+
+        img
+          width: auto
+          height: auto
+          max-width: 600px
+          max-height: 400px
+        .text
+          order: 0
+          h2
+          h3
+          p

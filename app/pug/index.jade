@@ -1,5 +1,6 @@
 extends partials/layout
-
+block config
+  - var pageTitle = "HC Brabo - Home"
 block content
     section.home
       .title
@@ -8,6 +9,6 @@ block content
       .events
         h1 Evenementen:
         .event1
-          <img src="../images/td1.jpg" alt="event1">
+          img(src="../images/td1.jpg" alt="event1")
         .event2
-          <img src="../images/td1.jpg" alt="event1">
+          img(src="../images/td1.jpg" alt="event1")

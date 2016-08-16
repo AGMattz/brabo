@@ -1,0 +1,30 @@
+mixin product(title, imageID, price)
+  .product
+    .wrapper
+      img(
+        src="images/#{image}#{imageID}.jpg"
+        )
+      .text
+        h2 #{title}
+        p.price € #{price}
+
+mixin lid(functie, naam, achternaam, text)
+    .lid
+      img(
+        src="images/#{naam}.jpg"
+        )
+      .text
+        h2 #{functie}
+        h3 #{naam} #{achternaam}
+        p #{text}
+  
+mixin event(image, naam, datum, plaats, text)
+    .event
+      img(
+        src="images/#{image}.jpg"
+        )
+      .text
+        h2 #{naam}
+        h3 #{datum} 
+        h3 #{plaats}
+        p #{text}

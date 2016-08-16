@@ -8,8 +8,8 @@ cache = require('gulp-cache'), //caches images
 del = require('del'), //deletes maps
 sourcemaps = require('gulp-sourcemaps'), //sourcemaps
 autoprefixer = require('gulp-autoprefixer'), //adds prefixes
-pug = require('gulp-pug'); //Pug!
-
+pug = require('gulp-pug'), //Pug!
+jade = require('gulp-jade');
 //Log Errors
 function errorlog(err){
 	console.error(err.message);
@@ -78,6 +78,19 @@ gulp.task('build', function (callback) {
   )
 });
 
+//Jade
+gulp.task('jade', function() {
+  return gulp.src('app/pug/*.jade')
+  .pipe(jade({
+    // Your options in here.
+		pretty: true
+  }))
+	.pipe(gulp.dest("./dist/"))
+	.pipe(browserSync.reload({
+		stream: true
+	}));
+});
+
 //Puggies
 gulp.task('pug', function buildHTML() {
   return gulp.src('app/pug/*.pug')
@@ -94,10 +107,10 @@ gulp.task('pug', function buildHTML() {
 //Watches
 gulp.task('watch', ['browserSync', 'sass', 'pug'], function(){
   gulp.watch('app/sass/**/*.sass', ['sass']); //watches all SASS
-  gulp.watch('app/pug/**/*.pug', ['pug']); //watches all puggs *-*
+  gulp.watch('app/pug/**/*.jade', ['jade']); //watches all puggs *-*
   gulp.watch('app/js/**/*.js', browserSync.reload);
   //other watches
 });
 
 //DEFAULT
-gulp.task('default', ['sass','pug','browserSync', 'watch']); //runs tasks and then watches them
+gulp.task('default', ['sass','jade','browserSync', 'watch']); //runs tasks and then watches them
