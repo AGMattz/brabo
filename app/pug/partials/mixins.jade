@@ -28,3 +28,13 @@ mixin event(image, naam, datum, plaats, text)
         h3 #{datum} 
         h3 #{plaats}
         p #{text}
+
+mixin sponsor(image, naam, text)
+    .sponsor
+      .text
+        h2 #{naam}
+        p #{text}
+        
+      img(
+        src="images/#{image}.jpg"
+        )
