@@ -7,7 +7,8 @@ imagemin = require('gulp-imagemin'), //min images
 cache = require('gulp-cache'), //caches images
 del = require('del'), //deletes maps
 sourcemaps = require('gulp-sourcemaps'), //sourcemaps
-autoprefixer = require('gulp-autoprefixer'); //adds prefixes
+autoprefixer = require('gulp-autoprefixer'), //adds prefixes
+pug = require('gulp-pug'); //Pug!
 
 //Log Errors
 function errorlog(err){
@@ -78,8 +79,6 @@ gulp.task('build', function (callback) {
 });
 
 //Puggies
-var pug = require('gulp-pug');
-
 gulp.task('pug', function buildHTML() {
   return gulp.src('app/pug/*.pug')
   .pipe(pug({
