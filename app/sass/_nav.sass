@@ -1,0 +1,23 @@
+
+nav
+  background: $dred
+  max-width: 100%
+  min-height: 15px
+  .navbar
+    display: none
+    .nav-items
+      display: flex
+  a
+    padding: 10px 20px
+    &:hover
+      background-color: $red
+
+
+@media (min-width: 720px)
+  nav
+    .ham
+      display: none
+    .navbar
+      display: flex
+      justify-content: space-between
+      a
