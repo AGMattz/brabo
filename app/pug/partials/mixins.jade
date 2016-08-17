@@ -2,17 +2,22 @@ mixin product(title, imageID, price)
   .product
     .wrapper
       img(
-        src="images/#{image}#{imageID}.jpg"
+        src="images/products/#{image}#{imageID}.jpg"
         )
       .text
         h2 #{title}
-        p.price € #{price}
+        p € #{price}
 
-mixin lid(functie, naam, achternaam, text)
+mixin lid(functie, naam, achternaam, text, ft)
     .lid
-      img(
-        src="images/#{naam}.jpg"
-        )
+      if typeof(ft) === 'undefined'
+        img(
+          src="images/leden/#{naam}.jpg"
+          )
+      else
+        img(
+          src="images/leden/#{ft}.jpg"
+          )
       .text
         h2 #{functie}
         h3 #{naam} #{achternaam}
@@ -21,7 +26,7 @@ mixin lid(functie, naam, achternaam, text)
 mixin event(image, naam, datum, plaats, text)
     .event
       img(
-        src="images/#{image}.jpg"
+        src="images/events/#{image}.jpg"
         )
       .text
         h2 #{naam}
@@ -36,5 +41,5 @@ mixin sponsor(image, naam, text)
         p #{text}
         
       img(
-        src="images/#{image}.jpg"
+        src="images/sponsors/#{image}.jpg"
         )

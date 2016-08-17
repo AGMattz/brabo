@@ -3,6 +3,7 @@ nav
   background: transparentize($dred, 1)
   max-width: 100%
   min-height: 15px
+  transition: 200ms
   .navbar
     display: none
     .nav-items
@@ -14,6 +15,11 @@ nav
   .ham
     text-align: center
     padding: 10px 0px
+.navbar-fixed
+  position: fixed
+  width: 100%
+  z-index: 20
+  background: transparentize($dred, 0.4)
 
 @media (min-width: 720px)
   nav
