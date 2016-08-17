@@ -12,14 +12,14 @@ $(document).ready(function(){
       window.location = $(this).find("a").attr("href");
       return false;
     });
-  // $("#toggle").on('click', function(e) {
-  // $('nav').toggleClass('js-open');
-  //     e.preventDefault();
-  // });
-  //
-  // $(".nav-background").on('click', function() {
-  //   $('nav').removeClass('js-open');
-  // });
+  $("#ham").on('click', function(e) {
+  $('#navbar-mob').toggleClass('mob-click');
+      e.preventDefault();
+  });
+
+  $(".container").on('click', function() {
+    $('nav').removeClass('mob-click');
+  });
 });
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];

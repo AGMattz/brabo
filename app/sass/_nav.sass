@@ -11,10 +11,23 @@ nav
   a
     padding: 10px 20px
     &:hover
+      cursor: pointer
       background-color: $red
-  .ham
+  #navbar-mob
+    display: flex
+    flex-direction: column
     text-align: center
-    padding: 10px 0px
+    transition: 2s
+    > *
+      padding: 10px 0px
+      display: none
+      transition: 2ms
+    #ham
+      display: block
+  .mob-click
+    > *
+      display: block !important
+
 .navbar-fixed
   position: fixed
   width: 100%
@@ -24,7 +37,7 @@ nav
 
 @media (min-width: 1020px)
   nav
-    .ham
+    #navbar-mob
       display: none
     .navbar
       display: flex
