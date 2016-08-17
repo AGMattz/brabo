@@ -17,8 +17,10 @@ $(document).ready(function(){
       e.preventDefault();
   });
 
-  $(".container").on('click', function() {
-    $('nav').removeClass('mob-click');
+  $("#navbar-mob").on('click', function() {
+    if(!$('#navbar-mob').hasClass('mob-click')){
+      this.removeClass('mob-click');
+    }
   });
 });
 (function(d, s, id) {
