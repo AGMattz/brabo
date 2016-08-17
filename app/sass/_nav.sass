@@ -1,6 +1,6 @@
 
 nav
-  background: transparentize($dred, 1)
+  background: transparentize(#222, 0)
   max-width: 100%
   min-height: 15px
   transition: 200ms
@@ -19,9 +19,10 @@ nav
   position: fixed
   width: 100%
   z-index: 20
-  background: transparentize($dred, 0.4)
+  background: transparentize($dred, 0.1)
 
-@media (min-width: 720px)
+
+@media (min-width: 1020px)
   nav
     .ham
       display: none
@@ -29,3 +30,9 @@ nav
       display: flex
       justify-content: space-between
       a
+        padding: 10px 10px
+@media (min-width: 1440px)
+  nav
+    .navbar
+      a
+        padding: 10px 20px

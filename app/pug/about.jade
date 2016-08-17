@@ -3,23 +3,25 @@ extends partials/layout
 block config
   - var pageTitle = "HC Brabo - About"
 block content
-    section.about
-      .title
-        h1 Welkom. <span>Beste Commilitones, sympathisanten en nieuwe leden!</span>
+    section#about
       .intro
-        p Voor diegene die het nog niet wisten, wij zijn de studentenclub Brabo, wij vertegenwoordigen de Ingenieurs van de UA en de richtingen van IWT van KdG in het studentenleven.
-        p Wij gaan voor de 56ste keer op rij een bangelijk jaar voor onze leden bezorgen. Je vindt al onze activiteiten in onze kalender en op facebook. 
-        p Bij rood en wit en zwart voelt men zich thuis
-        p Dixit, Patron Niko <br>Praeses 2016-2017
-      .links
-        .box
-          a(href="#praes") Praesidium
-        .box
-          a(href="#pros") Pro-Senioren
-        .box
-          a(href="#lied") Clublied
-        .box
-          a(href="#gesch") Geschiedenis
+        .textblock
+          .title
+            h1 <span>Welkom, bij</span> HC Brabo
+          .text
+            p Voor diegene die het nog niet wisten, wij zijn de studentenclub HC Brabo, wij vertegenwoordigen de richtingen van IWT van KdG in het studentenleven.
+            p Wij gaan voor de 56ste keer op rij een bangelijk jaar voor onze leden bezorgen. Je vindt al onze activiteiten in onze kalender en op facebook. 
+            p Bij rood en wit en zwart voelt men zich thuis
+            p Dixit, Patron Niko <br>Praeses 2016-2017
+        .links
+          .box
+            a(href="#praes") Praesidium
+          .box
+            a(href="#pros") Pro-Senioren
+          .box
+            a(href="#lied") Clublied
+          .box
+            a(href="#gesch") Geschiedenis
       include partials/praesidium
       include partials/prosenioren
       include partials/clublied

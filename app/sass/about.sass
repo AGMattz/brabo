@@ -2,34 +2,85 @@
 @import prosenioren
 @import clublied
 @import geschiedenis
-section
-.about
-  .title
-    margin-top: 30px
-    span
-      display: block
-      font-family: Open Sans
-      font-weight: 400
+#about
+  overflow-x: hidden
   .intro
-    width: 80%
-    margin: 0 auto
-    text-align: center
-  .links
-    padding-top: 50px
-    margin: 0 auto
-    width: 60%
     display: flex
-    justify-content: space-around
-    flex-wrap: wrap
-    a
-      width: 250px
-      height: 150px
-      margin: 5px
-      border-radius: 5px
-      background-color: $red
-      display: flex
-      justify-content: center
-      align-items: center
-      &:hover
-        background-color: #eee
-        color: #222
+    min-height: 95vh
+    .textblock
+      .title
+        width: 80%
+        margin: 0 auto
+        margin:
+          top: 30px
+          bottom: 30px
+        h1
+          text-align: left
+        span
+          font-family: Open Sans
+          font-weight: 400
+      .text
+        width: 80%
+        margin: 0 auto
+        text-align: left
+    .links
+      display: none
+
+
+@media (min-width: 720px)
+  #about
+    .intro
+      .textblock
+        .title
+          margin:
+            bottom: 60px
+@media (min-width: 1020px)
+  #about
+    .intro
+      .textblock
+        flex: 1 1 100%
+        .title
+          margin:
+            top: 200px
+            bottom: 60px
+
+      .links
+        flex: 1 1 50%
+        display: flex
+        order: -1
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        border-right: 1px solid #666
+        flex-wrap: wrap
+        margin-top: 10px
+
+      a
+        width: auto
+        height: auto
+        min-width: 180px
+        min-height: 12%
+        max-width: 250px
+        max-height: 150px
+        margin: 5px
+        background-color: $dred
+        border: 1px solid #ddd
+        color: #eee
+        display: flex
+        justify-content: center
+        align-items: center
+        &:hover
+          background-color: #eee
+          color: $red
+          border: 1px solid $red
+@media (min-width: 1450px)
+  #about
+    .intro
+      .textblock
+        .title
+
+      .links
+        width: 60%
+        a
+          width: 250px
+          height: 150px
