@@ -15,9 +15,9 @@ block content
           .text
             // +brabomail("Praeses")
             form(name="mail", action="/mail", method="post")
-              input(type="text", name="name" value="Name ...")
-              input(type="email", name="email" value="E-mail ...")
-              input(type="text", name="text" value="Message ...")
+              input(type="text", name="name" placeholder="Name ...")
+              input(type="email", name="email" placeholder="E-mail ...")
+              input(type="text", name="text" placeholder="Message ...")
               input(type="submit", value="Send")
 
         .map
