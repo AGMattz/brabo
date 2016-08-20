@@ -14,10 +14,10 @@ block content
             h2 Mail: <span>functie@hcbrabo.be</span>
           .text
             // +brabomail("Praeses")
-            form(name="mail", action="/mail", method="post")
-              input(type="text", name="name" placeholder="Name ...")
-              input(type="email", name="email" placeholder="E-mail ...")
-              input(type="text", name="text" placeholder="Message ...")
+            form(name="mail", onsubmit="return false;", method="post")
+              input(type="text", name="name" placeholder="Name ..." required)
+              input(type="email", name="email" placeholder="E-mail ..." required)
+              input(type="textarea", name="text" placeholder="Message ..." required)
               input(type="submit", value="Send")
 
         .map
