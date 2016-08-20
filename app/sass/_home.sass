@@ -3,15 +3,38 @@
   display: flex
   flex-wrap: wrap
   min-height: 90vh
-  .title
+  .head
     flex: 1.7
-    display: flex
-    flex-direction: column
-    h1
-      font-size: 4.2em
-    span
-      font-family: Open Sans
-      font-weight: 400
+    .title
+      display: flex
+      flex-direction: column
+      h1
+        font-size: 4.2em
+      span
+        font-family: Open Sans
+        font-weight: 400
+    .links
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      align-items: center
+      height: 30%
+      font-weight: 700
+      a
+        color: $dred
+        background-color: #ddd
+        border: 2px solid $dred
+        height: 70px
+        width: 200px
+        margin: 0px 20px
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: 200ms
+        &:hover
+          background-color: $dred
+          color: #eee
+          border: 2px solid $dred
   .events
     flex: 1 100%
     padding: 0px 20px

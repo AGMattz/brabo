@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700" rel="stylesheet"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/main.js"></script>
-    <title>HC Brabo - Events</title>
+    <title>HC Brabo - About</title>
   </head>
   <body>
     <div class="container">
@@ -19,25 +19,27 @@
           <div class="nav-items"><a href="about.html">About</a><a href="#">Kalender</a><a href="events.html">Evenementen</a><a href="webshop.html">Webshop</a><a href="contact.html">Contact</a><a href="sponsors.html">Sponsors</a><a href="#">Lid Worden</a><a href="#">Login</a></div>
         </div>
       </nav>
-      <section class="events">
-        <h1>Events</h1>
-        <div class="evenementen">
-          <div class="event"><img src="images/events/scht.jpg"/>
+      <section id="contact">
+        <div class="intro">
+          <div class="textblock">
+            <div class="title">
+              <h1>Contact</h1>
+              <p>Salesianenlaan 90 </p>
+              <p>2660 Antwerpen</p>
+              <p><a href="mailto:info@hcbrabo.be">info@hcbrabo.be</a></p>
+              <h2>Mail: <span>functie@hcbrabo.be</span></h2>
+            </div>
             <div class="text">
-              <h2>Schachtenconvent</h2>
-              <h3>28 September 2016</h3>
-              <h3>Den Aalmoezenier</h3>
-              <p>De eerste cantus met de nieuwe Schachtjes</p>
+              <!-- +brabomail("Praeses")-->
+              <form name="mail" action="/mail" method="post">
+                <input type="text" name="name" value="Name ..."/>
+                <input type="email" name="email" value="E-mail ..."/>
+                <input type="text" name="text" value="Message ..."/>
+                <input type="submit" value="Send"/>
+              </form>
             </div>
           </div>
-          <div class="event"><img src="images/events/verk.jpg"/>
-            <div class="text">
-              <h2>Verkoop</h2>
-              <h3>04 Oktober 2016</h3>
-              <h3>Den Aalmoezenier</h3>
-              <p>We verkopen de schachtjes dit jaar weer!</p>
-            </div>
-          </div>
+          <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2501.465992090599!2d4.37055365138847!3d51.17363364277236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f1502bc55977%3A0x9ff7b7319cbb60b1!2sSalesianenlaan+90%2C+2660+Antwerpen%2C+Belgi%C3%AB!5e0!3m2!1snl!2sus!4v1471717600713" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
         </div>
       </section>
     </div>

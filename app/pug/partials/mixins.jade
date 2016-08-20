@@ -1,8 +1,8 @@
-mixin product(title, imageID, price)
+mixin product(title, image, price)
   .product
     .wrapper
       img(
-        src="images/products/#{image}#{imageID}.jpg"
+        src="images/products/#{image}.jpg"
         )
       .text
         h2 #{title}
@@ -22,7 +22,7 @@ mixin lid(functie, naam, achternaam, text, ft)
         h2 #{functie}
         h3 #{naam} #{achternaam}
         p #{text}
-  
+
 mixin event(image, naam, datum, plaats, text)
     .event
       img(
@@ -30,7 +30,7 @@ mixin event(image, naam, datum, plaats, text)
         )
       .text
         h2 #{naam}
-        h3 #{datum} 
+        h3 #{datum}
         h3 #{plaats}
         p #{text}
 
@@ -39,7 +39,10 @@ mixin sponsor(image, naam, text)
       .text
         h2 #{naam}
         p #{text}
-        
+
       img(
         src="images/sponsors/#{image}.jpg"
         )
+
+mixin brabomail(naam)
+    #[a(href="mailto:#{naam}@hcbrabo.be") #{naam}]
