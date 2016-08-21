@@ -16,6 +16,8 @@
     "gulp-cache": "^0.4.5",
     "gulp-imagemin": "^3.0.2",
     "gulp-jade": "^1.1.0",
+    "gulp-jade-for-php": "^1.0.9",
+    "gulp-jade-php": "^2.0.0-0",
     "gulp-pug": "^3.0.4",
     "gulp-sass": "^2.3.2",
     "gulp-slim": "^0.3.0",

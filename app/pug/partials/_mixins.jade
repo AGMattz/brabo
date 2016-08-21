@@ -46,6 +46,8 @@ mixin sponsor(image, naam, text)
 
 mixin brabomail(naam, mail)
     if typeof(mail) === 'undefined'
-      #[a(href="mailto:#{naam}@hcbrabo.be") #{naam}]
+      p
+        a(href="mailto:#{naam}@hcbrabo.be") #{naam}
     else
-      #[a(href="mailto:#{mail}@hcbrabo.be") #{naam}]
+      p
+        a(href="mailto:#{mail}@hcbrabo.be") #{naam}

@@ -1,0 +1,56 @@
+extends /partials/_layout.jade
+
+block config
+  - var pageTitle = "HC Brabo - Lid Worden"
+block content
+  section#lidworden
+    form(action='tempLeden.php', method='post')
+      h1 HC Brabo | Lid worden
+      .field
+        label(for='voornaam') Voornaam
+        input#voornaam(name='voornaam', type='text', autocomplete='off', required='')
+      .field
+        label(for='achternaam') Achternaam
+        input#achternaam(name='achternaam', type='text', autocomplete='off', required='')
+      .field
+        label(for='geboortedatum') Geboortedatum
+        input#geboortedatum(type='date', name='geboortedatum', autocomplete='off', required='')
+      .field
+        label(for='campus') Welke campus?
+        select#campus(name='campus')
+          option(value='KDG') Karel De Grote Hogeschool
+          option(value='UA') Universiteit Antwerpen
+          option(value='Andere') Andere
+      .field
+        label(for='richting') Richting
+        input#richting(name='richting', type='text', required='')
+      .field
+        label(for='jaar') In welk jaar zit je?
+        input#jaar(type='number', name='jaar', value='1', required='')
+      .field
+        label(for='email') E-mail
+        input#email(name='email', type='email', autocomplete='off')
+      .field
+        label(for='gsmnummer') GSM-nummer
+        input#gsmnummer(name='gsmnummer', type='tel', autocomplete='off', required='')
+      .field
+        label(for='dopen') Dopen?
+        select#dopen(name='dopen')
+          option(value='ja') Ja
+          option(value='nee') Nee
+          option(value='misschien') Misschien
+      .field
+        label(for='sport') E-mail voor sport & cultuur?
+        select#sport(name='sport')
+          option(value='ja') Ja
+          option(value='nee') Nee
+      .field
+        label(for='lidmaatschap')
+          | Wilt u Ere-lid worden?
+          span  (50€ maar heel het jaar op al onze evenementen gratis binnen)
+        select#lidmaatschap(name='lidmaatschap')
+          option(value='Lid') Lid
+          option(value='Erelid') Erelid
+          option(value='Praesidium') Praesidium
+      .field.button
+        input(type='submit', value='Registreer!')

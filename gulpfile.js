@@ -10,6 +10,7 @@ sourcemaps = require('gulp-sourcemaps'), //sourcemaps
 autoprefixer = require('gulp-autoprefixer'), //adds prefixes
 pug = require('gulp-pug'), //Pug!
 jade = require('gulp-jade');
+
 //Log Errors
 function errorlog(err){
 	console.error(err.message);
@@ -90,6 +91,20 @@ gulp.task('jade', function() {
 		stream: true
 	}));
 });
+//JADEPHP
+// gulp.task('jadephp', function() {
+//   return gulp.src('app/pug/php/*.jade')
+//   .pipe(jadephp({
+//     // Your options in here.
+// 		basedir: __dirname + 'app/pug',
+// 		pretty: true
+//   }))
+// 	.pipe(gulp.dest("./dist/"))
+// 	.pipe(browserSync.reload({
+// 		stream: true
+// 	}));
+// });
+
 
 //Puggies
 gulp.task('pug', function buildHTML() {
