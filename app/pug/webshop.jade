@@ -6,15 +6,23 @@ block content
   section#webshop
     .title
       h1 Webshop
-    .products
-      +product("Codex", "codex", "10")
-      +product("Rode Codex", 1, "5")
-      +product("Een Brabo Mok", 1, "15")
-      +product("Bierpetje", 2, "8")
-      +product("Sticker", 1, "0.5")
-      +product("Zilveren Pin", 2, "1")
-      +product("Gouden Pin", 1, "2")
-      +product("Praesidium Pin", 2, "5")
-      +product("Opstrijk Sticker", 1, "5")
-      +product("Trui", 2, "20")
-      +product("Vest", 1, "25")
+    .content
+      .textblock
+        h2 Make an order!
+        form(name="mail", onsubmit="return false;", method="post")
+          input(type="text", name="name" placeholder="Name ..." required)
+          input(type="email", name="email" placeholder="E-mail ..." required)
+          input(type="textarea", name="text" placeholder="Message ..." required)
+          input(type="submit", value="Send")
+      .products
+        +product("Codex", "codex", "10")
+        +product("Rode Codex", 1, "5")
+        +product("Een Brabo Mok", 1, "15")
+        +product("Bierpetje", 2, "8")
+        +product("Sticker", 1, "0.5")
+        +product("Zilveren Pin", 2, "1")
+        +product("Gouden Pin", 1, "2")
+        +product("Praesidium Pin", 2, "5")
+        +product("Opstrijk Sticker", 1, "5")
+        +product("Trui", 2, "20")
+        +product("Vest", 1, "25")
